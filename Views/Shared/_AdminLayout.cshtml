@@ -57,28 +57,25 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                     </div>
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="sidebar-menu">
-                            <li class="header">MAIN NAVIGATION</li>
+                            <li class="header"></li>
                             <li class="treeview">
-                                <a href="index.html">
-                                    <i class="fa fa-dashboard"></i> <span>Welcome</span>
+                                <a href="Home/Index">
+                                    <i class="fa fa-dashboard"></i> <span>Home</span>
                                 </a>
                             </li>
                             <li class="treeview">
-                                <a href="#">
+                                <a asp-controller="Home" asp-action="AddStudent">
                                     <i class="fa fa-laptop"></i>
-                                    <span>Components</span>
-                                    <i class="fa fa-angle-left pull-right"></i>
+                                    <span>Registarion</span>
+                                   
                                 </a>
-                                <ul class="treeview-menu">
-                                    <li><a href="grids.html"><i class="fa fa-angle-right"></i> Grids</a></li>
-                                    <li><a href="media.html"><i class="fa fa-angle-right"></i> Media Css</a></li>
-                                </ul>
+                                
                             </li>
                             <li class="treeview">
-                                <a href="charts.html">
+                                <a asp-controller="Home" asp-action="Feedback">
                                     <i class="fa fa-pie-chart"></i>
-                                    <span>Charts</span>
-                                    <span class="label label-primary pull-right">new</span>
+                                    <span>Feedback</span>
+                                   
                                 </a>
                             </li>
                             <li class="treeview">
@@ -139,7 +136,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                                     <li><a href="signup.html"><i class="fa fa-angle-right"></i> Register</a></li>
                                     <li><a href="404.html"><i class="fa fa-angle-right"></i> 404 Error</a></li>
                                     <li><a href="500.html"><i class="fa fa-angle-right"></i> 500 Error</a></li>
-                                    <li><a href="blank-page.html"><i class="fa fa-angle-right"></i> Blank Page</a></li>
+                                    <li><a href="blank-page.html"><i class="fa fa-angle-right"></i></a></li>
                                 </ul>
                             </li>
                             <li class="header">LABELS</li>
@@ -365,7 +362,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
         <!-- main content start-->
         <div id="page-wrapper">
             <div class="main-page">
-                <h2 class="title1">Blank Page</h2>
+                <h2 class="title1"></h2>
                 <div class="blank-page widget-shadow scroll" id="style-2 div1">
                     @RenderBody()
                 </div>

@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "Feedback";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 style="color:blue;">FEEDBACK</h2>
+<br />
+<br />
+<form action="Feedback" method="get">
+
+    <div >
+        <label for="email">Email ID :</label>
+        <input type="email"  name="Email">
+    </div>
+    <br />
+    <div >
+        <label for="email">Contents :</label>
+        <input type="text"  name="Contents">
+    </div>
+    <br />
+    <div >
+        <input type="submit" value="Submit " class="submit" name="submit" id="submit" />
+    </div>
+</form>
+
+
