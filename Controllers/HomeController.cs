@@ -26,6 +26,7 @@ namespace SampleProject.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public IActionResult AddStudent(Register newregister)
         {
@@ -43,6 +44,16 @@ namespace SampleProject.Controllers
         public IActionResult Feedback()
         {
             return View();
+        }
+        public IActionResult StudentList()
+        {
+            var resultList = dbContext.Registers.ToList();
+            return View(resultList);
+        }
+        public IActionResult StudentL2()
+        {
+            var resultList = dbContext.Registers.ToList();
+            return View(resultList);
         }
 
 

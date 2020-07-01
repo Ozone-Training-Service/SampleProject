@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewData["Title"] = "StudentL2";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>StudentL2</h2>
+
+@model IEnumerable<SampleProject.Models.Register>
+
+
+<table>
+    <tr>
+        <td>
+            Name
+        </td>
+        <td>
+            Address
+        </td>
+        <td>
+            Gender
+        </td>
+        <td>
+            Birth_Date
+        </td>
+        <td>
+            Course
+        </td>
+        <td>
+            Email
+        </td>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.Name
+            </td>
+            <td>
+                @item.Address
+            </td>
+            <td>
+                @item.Gender
+            </td>
+            <td>
+                @item.Birth_date
+            </td>
+            <td>
+                @item.Course
+            </td>
+            <td>
+                @item.Email
+            </td>
+        </tr>
+    }
+
+</table>
+
+
