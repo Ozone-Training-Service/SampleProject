@@ -14,6 +14,7 @@ namespace SampleProject.Models
         }
         public virtual DbSet<Feedback> Feedbacks { get; set; }
         public virtual DbSet<Register> Registers { get; set; }
+        public virtual DbSet<Books> Books { get; set; }
 
 
 
