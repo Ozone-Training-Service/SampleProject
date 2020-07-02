@@ -52,6 +52,8 @@ namespace SampleProject.Controllers
         }
         public IActionResult StudentL2()
         {
+           
+            
             var resultList = dbContext.Registers.ToList();
             return View(resultList);
         }
