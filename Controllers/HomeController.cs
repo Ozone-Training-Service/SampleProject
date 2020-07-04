@@ -13,25 +13,24 @@ namespace SampleProject.Controllers
     {
 
 
-      //  private readonly IEmailSendingRepository emailRepository;
+       private readonly IEmailSendingRepository emailRepository;
       
         
-        private readonly AppDbContext dbContext;
-        public HomeController (AppDbContext dbContext
-            /*, IEmailSendingRepository emailRepository*/)
+       private readonly AppDbContext dbContext;
+        public  HomeController (AppDbContext dbContext, IEmailSendingRepository emailRepository)
         {
             this.dbContext = dbContext;
-            //  emailRepository = new EmailSendingRepository();// we are using new keyword
+             //emailRepository = new EmailSendingRepository();// we are using new keyword
            
             
-            //this.emailRepository = emailRepository;
+           this.emailRepository = emailRepository;
 
 
         }
         public IActionResult Index()
         {
             
-            //emailRepository.SendEmail();
+            emailRepository.SendEmail();
 
 
             return View();

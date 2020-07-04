@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace SampleProject.IRepository
 {
-    interface IEmailSendingRepository
+     public interface IEmailSendingRepository
     {
-         public void SendEmail();
+         void SendEmail();
     }
 }
