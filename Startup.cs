@@ -9,7 +9,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SampleProject.IRepository;
 using SampleProject.Models;
+using SampleProject.Repository;
 
 namespace SampleProject
 {
@@ -27,6 +29,15 @@ namespace SampleProject
         {
              services.AddDbContextPool<AppDbContext>(
               options => options.UseSqlServer("server=localhost\\SQLEXPRESS;database=SampleDB;Trusted_Connection=true"));
+
+
+
+            services.AddSingleton<ISMSRepository, SMSRepository>();
+            
+            services.AddSingleton<IEmailSendingRepository, EmailSendingRepository>();
+            services.AddTransient<IEmailSendingRepository, EmailSendingRepository>();
+
+
             services.AddMvc().AddXmlSerializerFormatters();
             services.AddControllersWithViews();
         }
