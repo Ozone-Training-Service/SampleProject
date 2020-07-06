@@ -22,5 +22,11 @@ namespace SampleProject.Controllers
 
             return PartialView("PartialView1");
         }
+
+        public IActionResult Index3()
+        {
+
+            return PartialView("PartialView2");
+        }
     }
 }
