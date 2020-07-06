@@ -1,33 +1,25 @@
 ﻿
 <h1 align="center">Partial View 1 Data</h1>
 
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-           
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-          
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-           
-        </tr>
-    </tbody>
-</table>
+<script>
+        
+
+                    $.ajax({
+                           type: "GET",
+                            url: "https://jsonplaceholder.typicode.com/posts",
+                            data: "{}",
+                            contentType: "application/json; charset=utf-8",
+                            dataType: "json",
+                              success: function (datas) {
+                                  for (var item in datas) {
+
+                                     alert("UserId=" + datas[item].userId + "Title" + datas[item].title);
+
+                                 
+
+                                  }
+                              }
+
+                    });
+
+</script>
