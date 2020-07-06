@@ -3,7 +3,7 @@
 
 <script>
         
-
+    var table = "";
                     $.ajax({
                            type: "GET",
                             url: "https://jsonplaceholder.typicode.com/posts",
@@ -13,9 +13,12 @@
                               success: function (datas) {
                                   for (var item in datas) {
 
-                                     alert("UserId=" + datas[item].userId + "Title" + datas[item].title);
+                                    //alert("UserId=" + datas[item].userId + "Title" + datas[item].title);
 
-                                 
+
+
+
+
 
                                   }
                               }
